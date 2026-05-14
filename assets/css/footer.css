@@ -1,0 +1,303 @@
+/* =========================
+   FOOTER BASE
+========================= */
+.site-footer {
+  background: #222426;
+  color: #cbd5e1;
+  margin-top: 0;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  padding: 35px 20px;
+  align-items: start;
+}
+
+/* =========================
+   BRAND
+========================= */
+.footer-brand h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   LINKS
+========================= */
+.footer-col a {
+  display: block;
+
+  color: #94a3b8;
+  text-decoration: none;
+
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+
+  transition: 0.3s ease;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* CONTACT TEXT */
+.footer-col p {
+  color: #94a3b8;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+.newsletter-box {
+  margin-top: 15px;
+}
+
+.newsletter-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 8px 5px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.newsletter button {
+  background: #007bff;
+  border: none;
+  padding: 0 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.3s ease;
+}
+
+.newsletter button:hover {
+  background: #0056d2;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+.social-icons {
+  margin-top: 14px;
+
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #111827;
+  color: #fff;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 0.9rem;
+}
+
+.social-icons a:hover {
+  background: #007bff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: inherit;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+}
+
+/* =========================
+   LIVE CHAT BUTTON
+========================= */
+.live-chat {
+  position: fixed;
+  bottom: 20px;
+  left: 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #25d366;
+  color: #fff;
+
+  padding: 14px 18px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  z-index: 9999;
+
+  transition: all 0.3s ease;
+}
+
+.live-chat i {
+  font-size: 1.3rem;
+}
+
+.live-chat:hover {
+  background: #1ebe5d;
+  transform: translateY(-4px);
+  color: #fff;
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+#goTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #007bff;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+  z-index: 9999;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+}
+
+#goTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#goTopBtn:hover {
+  background: #0056d2;
+  transform: translateY(-4px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .live-chat {
+    left: 15px;
+    bottom: 20px;
+
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+
+  .live-chat i {
+    font-size: 1.1rem;
+  }
+
+  #goTopBtn {
+    right: 15px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+  }
+
+}

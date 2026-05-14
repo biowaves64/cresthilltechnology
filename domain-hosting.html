@@ -1,0 +1,791 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- BASIC SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Domain Registration & Web Hosting Services | Crest-Hill Technology</title>
+
+  <meta name="title" content="Domain Registration & Web Hosting Services | Crest-Hill Technology">
+  <meta name="description" content="Crest-Hill Technology offers reliable domain registration, secure web hosting, SSL certificates, email hosting, and website deployment services for businesses.">
+  <meta name="keywords" content="Domain Registration, Web Hosting, SSL Certificate, Hosting Nigeria, Business Email Hosting, Crest-Hill Technology">
+  <meta name="author" content="Crest-Hill Technology">
+  <meta name="robots" content="index, follow">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Domain & Hosting Services | Crest-Hill Technology">
+  <meta property="og:description" content="Secure domain registration, fast hosting, SSL certificates and professional deployment services.">
+  <meta property="og:image" content="img/my-logo1.jpg">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Domain & Hosting Services | Crest-Hill Technology">
+  <meta name="twitter:description" content="Reliable hosting and domain solutions for businesses.">
+  <meta name="twitter:image" content="img/my-logo1.jpg">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="img/my-logo2.jpg">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
+  <style>
+
+    :root{
+      --primary:#00aaff;
+      --primary-dark:#008ecc;
+      --dark:#0f172a;
+      --text:#64748b;
+      --light:#f8fbff;
+      --white:#ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#fff;
+      overflow-x:hidden;
+      color:var(--dark);
+    }
+
+    /* HERO */
+
+    .hero{
+      background:
+      linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+      url('img/my-logo1.jpg') center/cover no-repeat;
+      padding:130px 20px;
+      text-align:center;
+      color:#fff;
+    }
+
+    .hero h1{
+      font-size:3rem;
+      font-weight:700;
+      margin-bottom:20px;
+      color:#fff;
+    }
+
+    .hero p{
+      max-width:850px;
+      margin:auto;
+      line-height:1.9;
+      opacity:.95;
+      font-size:1.05rem;
+    }
+
+    /* SECTION */
+
+    .section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.5rem;
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      max-width:700px;
+      margin:auto;
+      color:var(--text);
+      line-height:1.8;
+    }
+
+    /* SERVICE CARD */
+
+    .service-card{
+      background:#fff;
+      padding:35px 25px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 35px rgba(0,0,0,.06);
+      height:100%;
+      transition:.3s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .icon{
+      width:75px;
+      height:75px;
+      margin:auto auto 20px;
+      background:rgba(0,170,255,.1);
+      color:var(--primary);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:18px;
+      font-size:1.8rem;
+    }
+
+    .service-card h4{
+      font-weight:600;
+      margin-bottom:12px;
+    }
+
+    .service-card p{
+      color:var(--text);
+      line-height:1.8;
+    }
+
+    /* PRICING */
+
+    .pricing-heading{
+      font-size:1.6rem;
+      font-weight:700;
+      margin-bottom:25px;
+      color:var(--dark);
+    }
+
+    .pricing-card{
+      background:#fff;
+      border-radius:22px;
+      padding:35px 30px;
+      box-shadow:0 12px 35px rgba(0,0,0,.06);
+      transition:.35s ease;
+      height:100%;
+      position:relative;
+      border:2px solid transparent;
+      cursor:pointer;
+    }
+
+    .pricing-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .pricing-card.selected-plan{
+      border:2px solid var(--primary);
+      box-shadow:0 18px 45px rgba(0,170,255,.16);
+      transform:translateY(-8px);
+    }
+
+    .pricing-card.selected-plan::before{
+      content:'Selected';
+      position:absolute;
+      top:18px;
+      right:18px;
+      background:var(--primary);
+      color:#fff;
+      padding:6px 14px;
+      border-radius:30px;
+      font-size:.75rem;
+      font-weight:600;
+    }
+
+    .pricing-card h4{
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .price{
+      color:var(--primary);
+      font-size:2.3rem;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .pricing-card ul{
+      list-style:none;
+      padding:0;
+      margin:0 0 25px;
+    }
+
+    .pricing-card ul li{
+      margin-bottom:12px;
+      color:var(--text);
+    }
+
+    .pricing-card .btn{
+      border-radius:12px;
+      padding:12px;
+      font-weight:600;
+    }
+
+    .btn-outline-primary{
+      border:2px solid var(--primary);
+      color:var(--primary);
+    }
+
+    .btn-outline-primary:hover{
+      background:var(--primary);
+      border-color:var(--primary);
+    }
+
+    .btn-success{
+      margin-top:12px;
+    }
+
+    /* CTA */
+
+    .cta{
+      background:linear-gradient(135deg,#00aaff,#008ecc);
+      color:#fff;
+      text-align:center;
+      padding:100px 20px;
+    }
+
+    .cta h2{
+      font-size:2.5rem;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto auto 30px;
+      line-height:1.9;
+    }
+
+    .cta .btn{
+      padding:14px 28px;
+      border-radius:12px;
+      font-weight:600;
+    }
+
+    /* STICKY CTA */
+
+    .sticky-plan-bar{
+      position:fixed;
+      bottom:0;
+      left:0;
+      width:100%;
+      background:#fff;
+      padding:16px 20px;
+      box-shadow:0 -6px 20px rgba(0,0,0,.08);
+      z-index:999;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    #continuePlanBtn{
+      border:none;
+      background:var(--primary);
+      color:#fff;
+      padding:15px 30px;
+      border-radius:14px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s ease;
+      min-width:320px;
+    }
+
+    #continuePlanBtn:hover{
+      background:var(--primary-dark);
+    }
+
+    #continuePlanBtn:disabled{
+      background:#9ca3af;
+      cursor:not-allowed;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:992px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .section-title h2{
+        font-size:2rem;
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        padding:100px 20px;
+      }
+
+      .hero h1{
+        font-size:2rem;
+      }
+
+      .hero p{
+        font-size:.95rem;
+      }
+
+      .section{
+        padding:70px 0;
+      }
+
+      .section-title h2{
+        font-size:1.8rem;
+      }
+
+      .pricing-heading{
+        text-align:center;
+      }
+
+      #continuePlanBtn{
+        width:100%;
+        min-width:auto;
+      }
+
+      .sticky-plan-bar{
+        padding:15px;
+      }
+
+      body{
+        padding-bottom:110px;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Domain & Hosting Services</h1>
+    <p>
+      Secure domain registration, fast hosting, SSL certificates,
+      email hosting, and professional website deployment services.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Hosting Solutions</h2>
+      <p>
+        Reliable infrastructure with speed, uptime,
+        security, and scalable performance.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="icon">
+            <i class="fa fa-globe"></i>
+          </div>
+          <h4>Domain Registration</h4>
+          <p>
+            Secure your custom domain name with full ownership
+            and easy management control.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="icon">
+            <i class="fa fa-server"></i>
+          </div>
+          <h4>Reliable Web Hosting</h4>
+          <p>
+            Enjoy fast and secure hosting infrastructure
+            with excellent uptime performance.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="service-card">
+          <div class="icon">
+            <i class="fa fa-lock"></i>
+          </div>
+          <h4>SSL Security</h4>
+          <p>
+            Protect your website and customers with advanced
+            encrypted SSL security.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Hosting & Domain Packages</h2>
+      <p>
+        Choose a package that best suits your business needs.
+      </p>
+    </div>
+
+    <!-- HOSTING -->
+
+    <h3 class="pricing-heading">Hosting Plans</h3>
+
+    <div class="row g-4 mb-5">
+
+      <!-- STARTER -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="pricing-card"
+        data-plan="Starter Hosting"
+        data-type="Hosting"
+        data-features="1 Website, 10GB SSD Storage, Free SSL, 1 Email Account">
+
+          <h4>Starter Hosting</h4>
+
+          <div class="price">
+            ₦2,400
+            <span style="font-size:14px">/mon</span>
+          </div>
+
+          <ul>
+            <li>✔ 1 Website</li>
+            <li>✔ 10GB SSD Storage</li>
+            <li>✔ Free SSL</li>
+            <li>✔ 1 Email Account</li>
+          </ul>
+
+          <a href="https://clients.giddyhost.com/domain/pricing"
+          class="btn btn-outline-primary w-100"
+          target="_blank">
+            View Plans
+          </a>
+
+          <button class="btn btn-success w-100 book-btn">
+            Book Package
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- BUSINESS -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="pricing-card"
+        data-plan="Business Hosting"
+        data-type="Hosting"
+        data-features="5 Websites, 50GB SSD Storage, Free SSL, 10 Email Accounts">
+
+          <h4>Business Hosting</h4>
+
+          <div class="price">
+            ₦3,600
+            <span style="font-size:14px">/mon</span>
+          </div>
+
+          <ul>
+            <li>✔ 5 Websites</li>
+            <li>✔ 50GB SSD Storage</li>
+            <li>✔ Free SSL</li>
+            <li>✔ 10 Email Accounts</li>
+          </ul>
+
+          <a href="https://clients.giddyhost.com/domain/pricing"
+          class="btn btn-outline-primary w-100"
+          target="_blank">
+            View Plans
+          </a>
+
+          <button class="btn btn-success w-100 book-btn">
+            Book Package
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- ENTERPRISE -->
+
+      <div class="col-lg-4 col-md-6">
+
+        <div class="pricing-card"
+        data-plan="Enterprise Hosting"
+        data-type="Hosting"
+        data-features="Unlimited Websites, Unlimited Storage, Free SSL + Domain, 24/7 Priority Support">
+
+          <h4>Enterprise Hosting</h4>
+
+          <div class="price">
+            ₦12,400
+            <span style="font-size:14px">/mon</span>
+          </div>
+
+          <ul>
+            <li>✔ Unlimited Websites</li>
+            <li>✔ Unlimited Storage</li>
+            <li>✔ Free SSL + Domain</li>
+            <li>✔ 24/7 Priority Support</li>
+          </ul>
+
+          <a href="https://clients.giddyhost.com/domain/pricing"
+          class="btn btn-outline-primary w-100"
+          target="_blank">
+            View Plans
+          </a>
+
+          <button class="btn btn-success w-100 book-btn">
+            Book Package
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- DOMAIN -->
+
+    <h3 class="pricing-heading">Domain Packages</h3>
+
+    <div class="row g-4">
+
+      <div class="col-lg-6">
+
+        <div class="pricing-card"
+        data-plan=".com Domain"
+        data-type="Domain"
+        data-features="Instant Registration, DNS Management, Full Ownership, Auto Renewal">
+
+          <h4>.com Domain</h4>
+
+          <div class="price">
+            ₦18,782.60
+            <span style="font-size:14px">/year</span>
+          </div>
+
+          <ul>
+            <li>✔ Instant Registration</li>
+            <li>✔ DNS Management</li>
+            <li>✔ Full Ownership</li>
+            <li>✔ Auto Renewal</li>
+          </ul>
+
+          <a href="https://clients.giddyhost.com/domain/pricing"
+          class="btn btn-outline-primary w-100"
+          target="_blank">
+            View Plans
+          </a>
+
+          <button class="btn btn-success w-100 book-btn">
+            Book Package
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="pricing-card"
+        data-plan="Business Domain Bundle"
+        data-type="Domain"
+        data-features="Multiple Domain Options, Email Integration, DNS Control Panel, Priority Support">
+
+          <h4>Business Domain Bundle</h4>
+
+          <div class="price">
+            ₦8,504.35
+            <span style="font-size:14px">/year</span>
+          </div>
+
+          <ul>
+            <li>✔ Multiple Domain Options</li>
+            <li>✔ DNS Control Panel</li>
+            <li>✔ Email Integration</li>
+            <li>✔ Priority Support</li>
+          </ul>
+
+          <a href="https://clients.giddyhost.com/domain/pricing"
+          class="btn btn-outline-primary w-100"
+          target="_blank">
+            View Plans
+          </a>
+
+          <button class="btn btn-success w-100 book-btn">
+            Book Package
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+
+    <h2>Ready To Launch Your Website?</h2>
+
+    <p>
+      Let’s register your domain and deploy your website professionally.
+    </p>
+
+    <a href="contact.html" class="btn btn-light">
+      Get Started
+    </a>
+
+  </div>
+</section>
+
+<!-- STICKY BUTTON -->
+<div class="sticky-plan-bar">
+
+  <button id="continuePlanBtn" disabled>
+    Continue With Selected Plan
+  </button>
+
+</div>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- JS -->
+<script src="assets/js/main.js"></script>
+
+<script>
+
+  // SELECT CARDS
+  const pricingCards = document.querySelectorAll('.pricing-card');
+
+  // CONTINUE BUTTON
+  const continueBtn = document.getElementById('continuePlanBtn');
+
+  // SELECTED PLAN
+  let selectedPlan = null;
+
+  // CARD SELECTION
+  pricingCards.forEach(card => {
+
+    card.addEventListener('click', function(e){
+
+      // PREVENT BUTTONS FROM TRIGGERING CARD CLICK
+      if(e.target.tagName === 'A' || e.target.tagName === 'BUTTON'){
+        return;
+      }
+
+      // REMOVE ACTIVE STATE
+      pricingCards.forEach(c => c.classList.remove('selected-plan'));
+
+      // ADD ACTIVE STATE
+      card.classList.add('selected-plan');
+
+      // GET DATA
+      const planName = card.dataset.plan;
+      const planType = card.dataset.type;
+      const planFeatures = card.dataset.features;
+
+      // STORE PLAN
+      selectedPlan = {
+        plan: planName,
+        type: planType,
+        features: planFeatures
+      };
+
+      // ENABLE BUTTON
+      continueBtn.disabled = false;
+
+    });
+
+  });
+
+  // BOOK PACKAGE BUTTONS
+  document.querySelectorAll('.book-btn').forEach(button => {
+
+    button.addEventListener('click', function(e){
+
+      e.stopPropagation();
+
+      const card = button.closest('.pricing-card');
+
+      // REMOVE PREVIOUS SELECTIONS
+      pricingCards.forEach(c => c.classList.remove('selected-plan'));
+
+      // ADD SELECTED STYLE
+      card.classList.add('selected-plan');
+
+      // SAVE DATA
+      selectedPlan = {
+        plan: card.dataset.plan,
+        type: card.dataset.type,
+        features: card.dataset.features
+      };
+
+      localStorage.setItem(
+        'selectedHostingPlan',
+        JSON.stringify(selectedPlan)
+      );
+
+      // REDIRECT
+      window.location.href = 'contact.html';
+
+    });
+
+  });
+
+  // CONTINUE BUTTON
+  continueBtn.addEventListener('click', () => {
+
+    if(!selectedPlan){
+      alert('Please select a package first.');
+      return;
+    }
+
+    // SAVE TO STORAGE
+    localStorage.setItem(
+      'selectedHostingPlan',
+      JSON.stringify(selectedPlan)
+    );
+
+    // REDIRECT
+    window.location.href = 'contact.html';
+
+  });
+
+</script>
+
+  <!-- LOCAL JS -->
+ <script src="assets/js/main.js"></script>
+
+ </body>
+</html>

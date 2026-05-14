@@ -1,0 +1,30 @@
+.page-hero{
+  padding: 90px 20px;
+  background: linear-gradient(135deg,#4f46e5,#0ea5e9);
+  color: #fff;
+}
+
+.page-hero h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.service-card{
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  height: 100%;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.service-card i{
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+.service-card:hover{
+  transform: translateY(-5px);
+}

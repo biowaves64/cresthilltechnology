@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- PRIMARY SEO -->
+  <title>Blog | Web Design, SEO & Business Growth Tips - Crest-Hill Technology</title>
+
+  <meta name="description"
+    content="Explore expert insights on web design, SEO strategies, UI/UX design, e-commerce, hosting, and digital marketing from Crest-Hill Technology." />
+
+  <meta name="keywords"
+    content="web design blog Nigeria, SEO tips, UI UX design, digital marketing Nigeria, business website tips, e-commerce guide, hosting tips, Crest-Hill Technology blog" />
+
+  <meta name="author" content="Crest-Hill Technology" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://www.cresthilltechnology.com/blog.html" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog | Web Design, SEO & Business Growth Tips" />
+  <meta property="og:description"
+    content="Explore expert articles on web design, SEO, UI/UX, branding, and business growth strategies." />
+  <meta property="og:url" content="https://www.cresthilltechnology.com/blog.html" />
+  <meta property="og:image"
+    content="https://www.cresthilltechnology.com/assets/images/blog-cover.jpg" />
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog | Web Design & SEO Insights - Crest-Hill Technology" />
+  <meta name="twitter:description"
+    content="Learn web design, SEO, UI/UX, and business growth strategies." />
+  <meta name="twitter:image"
+    content="https://www.cresthilltechnology.com/assets/images/blog-cover.jpg" />
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONTS -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/css/blog.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+
+  <!-- BLOG STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Crest-Hill Technology Blog",
+    "url": "https://www.cresthilltechnology.com/blog.html",
+    "description": "Web design, SEO, UI/UX, hosting, and business growth articles from Crest-Hill Technology.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crest-Hill Technology",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cresthilltechnology.com/img/my-logo2.jpg"
+      }
+    }
+  }
+  </script>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="header-container"></div>
+
+  <!-- HERO -->
+  <section class="blog-hero py-5 text-center text-white">
+
+    <div class="container">
+
+      <h1 class="display-5 fw-bold">
+        Our Blog
+      </h1>
+
+      <p class="lead">
+        Insights, tips, and strategies for growing your business online
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SEARCH BAR -->
+  <section class="py-4 bg-primary">
+
+    <div class="container">
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+          <div class="search-box position-relative">
+
+            <i class="fas fa-search search-icon"></i>
+
+            <input
+              type="text"
+              id="blogSearch"
+              class="form-control form-control-lg"
+              placeholder="Search articles...">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-grid-section py-5">
+
+    <div class="container">
+
+      <div class="row g-4" id="blogContainer">
+
+        <!-- DYNAMIC BLOG POSTS LOAD HERE -->
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <!-- BLOG DATA -->
+  <script src="assets/js/blog-data.js"></script>
+
+  <!-- BLOG SYSTEM -->
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.getElementById("blogContainer");
+  const searchInput = document.getElementById("blogSearch");
+
+  function renderPosts(posts) {
+
+    container.innerHTML = "";
+
+    if (posts.length === 0) {
+
+      container.innerHTML = `
+        <div class="col-12 text-center">
+          <h4>No blog post found.</h4>
+        </div>
+      `;
+      return;
+    }
+
+    posts.forEach(post => {
+
+      const card = document.createElement("div");
+      card.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+
+      card.innerHTML = `
+        <a href="blog-details.html?slug=${post.slug}" class="blog-card-link">
+
+          <div class="card blog-card h-100 border-0 shadow-sm">
+
+            <img src="${post.image}"
+                 class="card-img-top"
+                 alt="${post.title}">
+
+            <div class="card-body d-flex flex-column">
+
+              <h5 class="card-title">
+                ${post.title}
+              </h5>
+
+              <p class="card-text flex-grow-1">
+                ${post.description}
+              </p>
+
+            </div>
+
+          </div>
+
+        </a>
+      `;
+
+      container.appendChild(card);
+
+    });
+
+  }
+
+  renderPosts(blogPosts);
+
+  /* SEARCH SYSTEM */
+  searchInput.addEventListener("keyup", function () {
+
+    const value = this.value.toLowerCase();
+
+    const filteredPosts = blogPosts.filter(post =>
+      post.title.toLowerCase().includes(value) ||
+      post.category.toLowerCase().includes(value) ||
+      post.description.toLowerCase().includes(value)
+    );
+
+    renderPosts(filteredPosts);
+
+  });
+
+});
+
+</script>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #0f172a;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contacts-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 15px;
+  background: #1d4ed8;
+}
+
+/* =========================
+   SECTION LAYOUT
+========================= */
+
+.contacts-section {
+  padding: 90px 20px;
+  background: #f8fafc;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contacts-left {
+  max-width: 450px;
+}
+
+.contacts-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.contacts-left h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.contacts-left p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.contacts-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.detail-box i {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-box h4 {
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.detail-box p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* =========================
+   RIGHT SIDE (FORM)
+========================= */
+
+.contacts-right {
+  display: flex;
+  justify-content: center;
+}
+
+/* FORM CARD */
+.contacts-form {
+  width: 100%;
+  max-width: 520px; /* 🔥 FIX: prevents wide form */
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   FORM ROWS
+========================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.contacts-form input,
+.contacts-form textarea,
+.contacts-form select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s ease;
+  background: #fff;
+}
+
+.contacts-form input:focus,
+.contacts-form textarea:focus,
+.contacts-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.contacts-form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contacts-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contacts-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.contacts-info {
+  padding: 70px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  background: #fff;
+}
+
+.info-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* =========================
+   MAP
+========================= */
+
+iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+  display: block;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts-left {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .contacts-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

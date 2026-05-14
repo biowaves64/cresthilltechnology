@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- BASIC SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Login | Crest-Hill Technology</title>
+
+  <meta name="title" content="Login | Crest-Hill Technology">
+  <meta name="description" content="Securely login to your Crest-Hill Technology account to manage projects, access digital services, and connect with our technology solutions.">
+  <meta name="keywords" content="Crest-Hill Technology Login, Client Login, Web Development, Tech Company Nigeria, Secure Login">
+  <meta name="author" content="Crest-Hill Technology">
+  <meta name="robots" content="index, follow">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Login | Crest-Hill Technology">
+  <meta property="og:description" content="Access your Crest-Hill Technology account securely and manage your digital services.">
+  <meta property="og:image" content="img/my-logo1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Login | Crest-Hill Technology">
+  <meta name="twitter:description" content="Secure login portal for Crest-Hill Technology users.">
+  <meta name="twitter:image" content="img/my-logo1.jpg">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="img/my-logo2.jpg">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+
+    :root{
+      --primary:#00aaff;
+      --primary-dark:#008ecc;
+      --bg:#f5fbff;
+      --text:#111827;
+      --muted:#64748b;
+      --white:#ffffff;
+      --border:#dbe4ee;
+      --shadow:0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#eef9ff,#f7fcff);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+      color:var(--text);
+    }
+
+    /* MAIN CONTAINER */
+    .container{
+      width:100%;
+      max-width:1150px;
+      background:var(--white);
+      border-radius:25px;
+      overflow:hidden;
+      display:flex;
+      box-shadow:var(--shadow);
+    }
+
+    /* LEFT SIDE */
+    .left{
+      flex:1;
+      background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+      url('img/my-logo1.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+      position:relative;
+    }
+
+    .left-content{
+      text-align:center;
+      color:#fff;
+      max-width:500px;
+    }
+
+    .left-content h1{
+      font-size:3rem;
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .left-content p{
+      line-height:1.8;
+      font-size:1rem;
+      opacity:.95;
+    }
+
+    /* RIGHT SIDE */
+    .right{
+      flex:1;
+      padding:50px 40px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    /* LOGO */
+    .logo{
+      margin-bottom:30px;
+    }
+
+    .logo a{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--primary);
+      font-size:1.2rem;
+      font-weight:700;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      object-fit:cover;
+      border-radius:14px;
+    }
+
+    /* TITLES */
+    .right h2{
+      font-size:2rem;
+      margin-bottom:10px;
+      color:var(--text);
+    }
+
+    .subtitle{
+      color:var(--muted);
+      margin-bottom:30px;
+      font-size:.95rem;
+    }
+
+    /* FORM */
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .input-group{
+      position:relative;
+    }
+
+    .input-group i{
+      position:absolute;
+      top:50%;
+      left:15px;
+      transform:translateY(-50%);
+      color:#777;
+    }
+
+    .input-group input{
+      width:100%;
+      padding:14px 15px 14px 45px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      outline:none;
+      font-size:1rem;
+      transition:.3s;
+    }
+
+    .input-group input:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 4px rgba(0,170,255,.1);
+    }
+
+    /* OPTIONS */
+    .options{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:15px;
+      flex-wrap:wrap;
+      font-size:.92rem;
+    }
+
+    .remember{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#555;
+    }
+
+    .remember input{
+      accent-color:var(--primary);
+      transform:scale(1.1);
+    }
+
+    .options a{
+      text-decoration:none;
+      color:var(--primary);
+      font-weight:500;
+    }
+
+    /* BUTTON */
+    button{
+      border:none;
+      background:var(--primary);
+      color:#fff;
+      padding:15px;
+      border-radius:12px;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      background:var(--primary-dark);
+      transform:translateY(-2px);
+    }
+
+    /* MESSAGE */
+    .message{
+      display:none;
+      padding:12px;
+      border-radius:10px;
+      font-size:.92rem;
+      margin-bottom:15px;
+    }
+
+    .success{
+      background:#e7fff0;
+      color:#148a43;
+    }
+
+    .error{
+      background:#fff0f0;
+      color:#c0392b;
+    }
+
+    /* SIGNUP */
+    .signup{
+      text-align:center;
+      margin-top:25px;
+      color:#555;
+      font-size:.95rem;
+    }
+
+    .signup a{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    /* FOOTER */
+    .footer{
+      text-align:center;
+      margin-top:30px;
+      color:#777;
+      font-size:.85rem;
+    }
+
+    .footer a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      .container{
+        flex-direction:column;
+      }
+
+      .left{
+        min-height:260px;
+      }
+
+      .left-content h1{
+        font-size:2rem;
+      }
+    }
+
+    @media(max-width:600px){
+
+      body{
+        padding:0;
+      }
+
+      .container{
+        border-radius:0;
+      }
+
+      .right{
+        padding:35px 20px;
+      }
+
+      .options{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+      <div class="left-content">
+        <h1>Welcome Back</h1>
+
+        <p>
+          Login to access your Crest-Hill Technology dashboard,
+          manage projects, connect with digital services,
+          and continue growing your business online.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/my-logo2.jpg" alt="Crest-Hill Technology Logo">
+          <span>CREST-HILL TECHNOLOGY</span>
+        </a>
+      </div>
+
+      <h2>Login Account</h2>
+
+      <p class="subtitle">
+        Enter your registered email and password below.
+      </p>
+
+      <!-- MESSAGE -->
+      <div class="message success" id="successMessage">
+        Login successful. Redirecting...
+      </div>
+
+      <div class="message error" id="errorMessage">
+        Invalid email or password.
+      </div>
+
+      <!-- FORM -->
+      <form id="loginForm">
+
+        <!-- EMAIL -->
+        <div class="input-group">
+          <i class="fa fa-envelope"></i>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email Address"
+            required
+          >
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="input-group">
+          <i class="fa fa-lock"></i>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          >
+        </div>
+
+        <!-- OPTIONS -->
+        <div class="options">
+
+          <label class="remember">
+            <input type="checkbox" id="rememberMe">
+            Remember me
+          </label>
+
+          <a href="forgot-password.html">
+            Forgot Password?
+          </a>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit">
+          Login
+        </button>
+
+      </form>
+
+      <!-- SIGNUP -->
+      <div class="signup">
+        Don’t have an account?
+        <a href="signup.html">Create one</a>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        &copy; 2026
+        <a href="index.html">Crest-Hill Technology</a>.
+        All Rights Reserved.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- LOGIN SCRIPT -->
+  <script>
+
+    const loginForm = document.getElementById("loginForm");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+    const errorMessage =
+      document.getElementById("errorMessage");
+
+
+    loginForm.addEventListener("submit", function(e){
+
+      e.preventDefault();
+
+      // GET INPUTS
+      const email =
+        document.getElementById("loginEmail").value.trim();
+
+      const password =
+        document.getElementById("loginPassword").value;
+
+      const rememberMe =
+        document.getElementById("rememberMe").checked;
+
+      // GET SAVED USER
+      const savedUser =
+        JSON.parse(localStorage.getItem("crestHillUser"));
+
+      // VALIDATION
+      if(
+        savedUser &&
+        savedUser.email === email &&
+        savedUser.password === password
+      ){
+
+        // SAVE SESSION
+        localStorage.setItem("loggedInUser", email);
+
+        // REMEMBER USER
+        if(rememberMe){
+          localStorage.setItem("rememberUser", email);
+        } else {
+          localStorage.removeItem("rememberUser");
+        }
+
+        // SHOW SUCCESS
+        errorMessage.style.display = "none";
+        successMessage.style.display = "block";
+
+        // REDIRECT
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 1800);
+
+      } else {
+
+        // ERROR
+        successMessage.style.display = "none";
+        errorMessage.style.display = "block";
+      }
+
+    });
+
+
+    // AUTO FILL REMEMBERED EMAIL
+    const rememberedEmail =
+      localStorage.getItem("rememberUser");
+
+    if(rememberedEmail){
+
+      document.getElementById("loginEmail").value =
+        rememberedEmail;
+
+      document.getElementById("rememberMe").checked = true;
+    }
+
+  </script>
+
+</body>
+</html>

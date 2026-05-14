@@ -1,0 +1,82 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #ffffff;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+.hero p {
+  margin-top: 10px;
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+/* =========================
+   MAIN SECTION
+========================= */
+
+main {
+  padding: 70px 20px;
+}
+
+/* =========================
+   CARD DESIGN (MODERN SaaS STYLE)
+========================= */
+
+.card {
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    padding: 50px 15px;
+  }
+}
